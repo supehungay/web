@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block content%}
+    <label for="username">Tên người dùng</label>
+    <input type="text" id="username" name="username" value="{{ session.username }}" required> <br>
+    <label for="fullname">Họ và tên</label>
+    <input type="text" id="fullname" name="fullname" value="{{ session.fullname }}" required> <br>
+    <label for="identify">Identification</label>
+    <input type="text" id="'identify" name="identify" value="{{ session.identify }}" required> <br>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" value="{{session.email}}" readonly><br>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="Female"> <br>
+    <label for="address">Address</label>
+    <input type="text" id="address" name="addess" value="{{session.address}}" required>  <br>
+    <input type="submit" value="Update">
+    {%endblock%}

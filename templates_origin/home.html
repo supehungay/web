@@ -21,31 +21,32 @@
 </head>
 
 <body>
+
     <!-- Header Start -->
     <div class="container-fluid bg-dark">
         <div class="row">
             <div class="col-lg-3 bg-dark">
-                <a href="{{ url_for('home') }}" class="navbar-brand">
+                <a href="home.html" class="navbar-brand">
                     <h1 class="text-primary text-uppercase">Hotelier</h1>
                 </a>
             </div>
             <div class="col-lg-9">
-                <div class="row bg-white align-items-center">
-                    <div class="col-lg-8 d-flex">
+                <div class="row bg-success align-items-center">
+                    <div class="col-sm-9 d-flex">
                         <div class="">
                             <i class="fa fa-envelope">hugdosiucute@u_oa.com</i>
                         </div>
-                        <div class=" mx-5">
+                        <div class="mx-5">
                             <i class="fa fa-phone-alt">+89 365 046 708</i>
                         </div>
                     </div>
-                    <div class="col-lg-4 px-5 text-end">
+                    <div class="col-sm-3 px-3 text-end">
                         <div class="d-inline-flex align-items-center py-2">
-                            <a class="me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="me-3" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="me-3" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="me-3" href="#"><i class="fab fa-youtube"></i></a>
+                            <a class="me-3" href="#"><i class="fab fa-facebook-f text-light"></i></a>
+                            <a class="me-3" href="#"><i class="fab fa-twitter text-light"></i></a>
+                            <a class="me-3" href="#"><i class="fab fa-linkedin-in text-light"></i></a>
+                            <a class="me-3" href="#"><i class="fab fa-instagram text-light"></i></a>
+                            <a class="me-3" href="#"><i class="fab fa-youtube text-light"></i></a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +54,8 @@
                     <!-- Search -->
                     <div class="col">
                         <form class="d-flex form-floating">
-                            <input class="form-control me-2" type="search" placeholder="abcd" id="floatingTextarea" required>
+                            <input class="form-control me-2" type="search" placeholder="abcd" id="floatingTextarea"
+                                required>
                             <label for="floatingTextarea">Search</label>
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
@@ -81,28 +83,15 @@
                                 <a class="dropdown-item" href="#">Something else here</a>
                             </div>
                         </div>
-                    <div class="col d-flex justify-content-end "> 
-                        {% if session.username %}
-                        <p style="color:red">Hello {{session.username }}</p>
-                        {% endif %}
-                    </div>
 
                         <div class="dropdown">
                             <a href="#" class="dropdown-toggle text-decoration-none" data-bs-toggle="dropdown">
                                 <img src="img/testimonial-1.jpg" class="rounded-circle" height="25" />
                             </a>
                             <div class="dropdown-menu">
-                                {% if session.username %}
-                                <a href="{{url_for('profile')}}" class="dropdown-item">My Profile</a>
+                                <a href="profile.html" class="dropdown-item">My Profile</a>
                                 <a href="#" class="dropdown-item">Settings</a>
-                                <a href="{{url_for('logout')}}" class="dropdown-item">Logout</a>
-                                {%if session.role_id == 0%}
-                                <a href="{{url_for('admin')}}" class="dropdown-item">Admin Manager</a>
-                                {% endif %}
-                                {% else %}
-                                <a href="{{ url_for('login') }}" class="dropdown-item">Login</a>
-                                <a href="{{ url_for('register') }}" class="dropdown-item">Register</a>
-                                {% endif %}
+                                <a href="#" class="dropdown-item">Logout</a>
                             </div>
                         </div>
 
